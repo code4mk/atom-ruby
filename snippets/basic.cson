@@ -82,9 +82,9 @@
     end
     """
   "else if ->ruby":
-    "prefix": "rb-elif"
+    "prefix": "rb-elsif"
     "body": """
-    elif $1
+    elsif $1
       $2
     """
   "case (switch) ->ruby":
