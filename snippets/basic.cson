@@ -1,0 +1,170 @@
+'.source.ruby':
+
+  "comment->ruby":
+    "prefix": "rb-comment"
+    "body": """
+    # $1
+    """
+  "comment 2->ruby":
+    "prefix": "rb-comment2"
+    "body": """
+    =begin
+    $1
+    =end
+    """
+  "gets->ruby":
+    "prefix": "rb-gets"
+    "body": """
+    gets
+    """
+  "puts ->ruby":
+    "prefix": "rb-puts"
+    "body": """
+    puts "$1"
+    """
+  "print->ruby":
+    "prefix": "rb-print"
+    "body": """
+    print "$1"
+    """
+  "var->ruby":
+    "prefix": "rb-var"
+    "body": """
+    age = $1
+    """
+  "global var->ruby":
+    "prefix": "rb-varglobal"
+    "body": """
+    $age = $1
+    """
+  "constant var->ruby":
+    "prefix": "rb-varconstant"
+    "body": """
+    AGE = $1
+    """
+  "instance var->ruby":
+    "prefix": "rb-varinstance"
+    "body": """
+    @age = $1
+    """
+  "class var->ruby":
+    "prefix": "rb-varclass"
+    "body": """
+    @@age = $1
+    """
+
+  "hash {}->ruby":
+    "prefix": "rb-hash"
+    "body": """
+    users = {
+      "name" => "kamal$1"
+    }
+    """
+  "hash element {=>}->ruby":
+    "prefix": "rb-hashelement"
+    "body": """
+    "age" => "21$1"
+    """
+  "if->ruby":
+    "prefix": "rb-if"
+    "body": """
+    if $1
+      $2
+    end
+    """
+  "if else ->ruby":
+    "prefix": "rb-ifelse"
+    "body": """
+    if $1
+      $2
+    else
+      $3
+    end
+    """
+  "else if ->ruby":
+    "prefix": "rb-elif"
+    "body": """
+    elif $1
+      $2
+    """
+  "case (switch) ->ruby":
+    "prefix": "rb-case"
+    "body": """
+    case $1
+    when $2
+      $3
+    else
+      $4
+    end
+    """
+  "when (case)->ruby":
+    "prefix": "rb-when"
+    "body": """
+    when $1
+      $2
+    """
+  "for->ruby":
+    "prefix": "rb-for"
+    "body": """
+    for i in $1 do
+      $2
+    end
+    """
+  "while->ruby":
+    "prefix": "rb-while"
+    "body": """
+    while $1
+      $2
+    end
+    """
+  "until->ruby":
+    "prefix": "rb-until"
+    "body": """
+    until $1
+      $2
+    end
+    """
+
+  "method->ruby":
+    "prefix": "rb-method"
+    "body": """
+    def method_name$1()
+      $2
+    end
+    """
+
+  "class->ruby":
+    "prefix": "rb-class"
+    "body": """
+    class Name$1
+      $1
+    end
+    """
+  "class object->ruby":
+    "prefix": "rb-classobject"
+    "body": """
+    variable = Name$1.new
+    """
+  "class extends->ruby":
+    "prefix": "rb-classextends"
+    "body": """
+     < Name$1
+    """
+
+  "module->ruby":
+    "prefix": "rb-module"
+    "body": """
+    module Name$1
+      $1
+    end
+    """
+  "call module class->ruby":
+    "prefix": "rb-moduleclasscall"
+    "body": """
+    variable = ModuleName.ClassName$1.new
+    """
+  "module  include->ruby":
+    "prefix": "rb-moduleinclude"
+    "body": """
+    include ModuleName
+    """
