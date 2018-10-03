@@ -1,0 +1,41 @@
+'.source.ruby':
+  "alias->ruby":
+    "prefix": "rb-alias"
+    "body": """
+    alias new_name$1 old_name
+    """
+  "alias_method->ruby":
+    "prefix": "rb-aliasmethod"
+    "body": """
+    alias_method :new_name$1, :old_name
+    """
+  "alias_method string ->ruby":
+    "prefix": "rb-aliasmethod2"
+    "body": """
+    alias_method 'new_name$1', 'old_name'
+    """
+  "upcase->ruby":
+    "prefix": "rb-upcase"
+    "body": """
+    upcase$1
+    """
+  "downcase->ruby":
+    "prefix": "rb-downcase"
+    "body": """
+    downcase$1
+    """
+  "integer->ruby":
+    "prefix": "rb-integer"
+    "body": """
+    to_i$1
+    """
+  "string->ruby":
+    "prefix": "rb-string"
+    "body": """
+    to_s$1
+    """
+  "require->ruby":
+    "prefix": "rb-require"
+    "body": """
+    require '$1'
+    """
